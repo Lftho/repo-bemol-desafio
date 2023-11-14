@@ -39,7 +39,7 @@ export class SignupComponent implements OnInit {
     this.formulario = this.formBuilder.group({
       username: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(35)]],
       email: [null, [Validators.required, Validators.email]],
-      password: [null, [Validators.required, Validators.minLength(6)]],
+      password: [null, [Validators.required, Validators.minLength(3)]],
 
       endereco: this.formBuilder.group({
         cep: [null, [Validators.required]],
@@ -51,6 +51,10 @@ export class SignupComponent implements OnInit {
       }),
     });
 
+    this.sendFormEndereco();
+  }
+
+  sendFormEndereco() {
     this.formulario.get('endereco.cep')
       ?.statusChanges
       .pipe(
@@ -65,9 +69,6 @@ export class SignupComponent implements OnInit {
         )
       )
       .subscribe(t => t ? this.populaDadosForm(t) : {});
-
-
-
   }
 
   consultaCEP() {
@@ -153,5 +154,4 @@ export class SignupComponent implements OnInit {
       console.log('sair', this.auth);
     })
   }
-
 }
