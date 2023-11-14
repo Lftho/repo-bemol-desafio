@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormControlName } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ChatService } from 'src/app/shared/services/chat/chat.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class DashboardComponent implements OnInit {
   messages: any = [];
   username = '';
 
-  constructor(private chatService: ChatService) { }
+  constructor(private chatService: ChatService, private router: Router) { }
 
   ngOnInit(): void {
     // // Obtém as mensagens com base no papel do usuário.
@@ -43,8 +44,11 @@ export class DashboardComponent implements OnInit {
     console.log(`Respondendo à mensagem de ${message.username}: ${message.text}`);
   }
 
-  interactWithUser(username: string): void {
-    // Adicione lógica para interagir com um usuário específico aqui.
-    console.log(`Interagindo com o usuário: ${username}`);
+  interactWithChat(): void {
+    this.router.navigateByUrl("chat");
+  }
+
+  interactWithAdmin(): void {
+    this.router.navigateByUrl("admin");
   }
 }
