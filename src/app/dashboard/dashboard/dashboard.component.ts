@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormControlName } from '@angular/forms';
 import { ChatService } from 'src/app/shared/services/chat/chat.service';
 
@@ -8,31 +8,34 @@ import { ChatService } from 'src/app/shared/services/chat/chat.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  @Output() menuToggled = new EventEmitter<boolean>();
+
   messages: any = [];
+  username = '';
 
   constructor(private chatService: ChatService) { }
 
   ngOnInit(): void {
-    // Obtém as mensagens com base no papel do usuário.
-    const userId = '123'; // Substitua pelo ID real do usuário após implementar a autenticação.
-    this.chatService.getMessagesByUserRole(userId).subscribe(
-      (data) => {
-        this.messages = data;
-      },
-      (error) => {
-        console.error('Erro ao carregar mensagens:', error);
-      }
-    );
+    // // Obtém as mensagens com base no papel do usuário.
+    // const userId = '123'; // Substitua pelo ID real do usuário após implementar a autenticação.
+    // this.chatService.getMessagesByUserRole(userId).subscribe(
+    //   (data) => {
+    //     this.messages = data;
+    //   },
+    //   (error) => {
+    //     console.error('Erro ao carregar mensagens:', error);
+    //   }
+    // );
 
 
-    this.chatService.getMessagesWithUsernames().subscribe(
-      (data) => {
-        this.messages = data;
-      },
-      (error) => {
-        console.error('Erro ao carregar mensagens:', error);
-      }
-    );
+    // this.chatService.getMessagesWithUsernames().subscribe(
+    //   (data) => {
+    //     this.messages = data;
+    //   },
+    //   (error) => {
+    //     console.error('Erro ao carregar mensagens:', error);
+    //   }
+    // );
   }
 
   respondToMessage(message: any): void {

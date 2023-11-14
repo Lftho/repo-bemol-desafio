@@ -1,15 +1,18 @@
+<mat-toolbar color="primary">
+  <span class="angular-logo">
+    <!-- <img src="assets/img/angular_whiteTransparent.svg" class="angular-logo"> -->
+    Desafio Bemol Chat
+  </span>
+  <span class="fill-remaining-space"></span>
+  <button mat-button routerLink="chat">
+    Chat
+  </button>
+  <button mat-button routerLink="admin">
+    Admin
+  </button>
+</mat-toolbar>
+
 <div class="container">
-  <mat-toolbar color="primary" class="matToolbar">
-    <mat-toolbar-row>
-      <span>Chat</span>
-
-      <ul class="menu">
-        <li><a routerLink="/landing">Voltar</a></li>
-      </ul>
-    </mat-toolbar-row>
-  </mat-toolbar>
-
-
   <main class="main-chat">
     <section class="section-chat">
       <div *ngFor="let message of messages">
