@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "repo-challenge-desafio-omnichannel",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

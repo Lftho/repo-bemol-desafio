@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-omnichannel": {
+      "hosting": {
+        "repo-challenge-desafio-omnichannel": [
+          "angular-omnichannel"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-omnichannel"
+  }
+}

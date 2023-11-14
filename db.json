@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "user1",
+      "password": "user123",
+      "role": "user"
+    }
+  ],
+  "profile": [
+    {
+      "id": 1
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "username": "user1",
+      "text": "Olá, como você está?",
+      "timestamp": 1636511100000
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "text": "Oi! Tudo bem, obrigado!",
+      "timestamp": 1636511200000
+    },
+    {
+      "username": "admin",
+      "text": "Como posso te ajuda com o sistema",
+      "timestamp": 1699986400267,
+      "id": 3
+    },
+    {
+      "username": "admin",
+      "text": "hmm, certo! Teria alguma ferramenta que você arquitetou para sua equipe ?",
+      "timestamp": 1699986475384,
+      "id": 5
+    },
+    {
+      "username": "admin",
+      "text": "oii\n",
+      "timestamp": 1699995125584,
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "text": "oii",
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "text": "oii",
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "text": "oii",
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "text": "oii",
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "text": "oii",
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "text": "oii",
+      "id": 12
+    },
+    {
+      "userId": 2,
+      "text": "oii",
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "text": "oii",
+      "id": 14
+    },
+    {
+      "userId": 2,
+      "text": "oii",
+      "id": 15
+    }
+  ]
+}

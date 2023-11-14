@@ -1,0 +1,9 @@
+<div *ngFor="let message of messages">
+  <strong>{{ message.username }}:</strong> {{ message.text }}
+</div>
+
+<!-- Campo de resposta e botão de resposta -->
+<div>
+  <textarea [(ngModel)]="responseText" placeholder="Digite sua resposta"></textarea>
+  <button (click)="respondToMessage($event)">Responder</button>
+</div>

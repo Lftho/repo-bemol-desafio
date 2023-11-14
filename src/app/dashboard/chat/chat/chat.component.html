@@ -1,0 +1,24 @@
+<div class="container">
+  <mat-toolbar color="primary" class="matToolbar">
+    <mat-toolbar-row>
+      <span>Chat</span>
+
+      <ul class="menu">
+        <li><a routerLink="/landing">Voltar</a></li>
+      </ul>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+  <main class="main-chat">
+    <section class="section-chat">
+      <div *ngFor="let message of messages">
+        <strong>{{ message.username }}:</strong> {{ message.text }}
+      </div>
+      <div class="section-footer">
+        <input [(ngModel)]="newMessage" placeholder="Digite uma mensagem..." />
+        <button (click)="sendMessage(newMessage)">Enviar</button>
+      </div>
+    </section>
+  </main>
+</div>

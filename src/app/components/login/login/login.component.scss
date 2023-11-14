@@ -1,0 +1,46 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.form-horizontal {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  max-width: 600px;
+
+  .endereco {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    width: 100%;
+  }
+}
+
+.example-radio-button {
+  margin-left: 7px;
+}
+mat-grid-tile {
+  background: #fafafa;
+}
+.width-50 {
+  width: 49%;
+}
+.ml-1 {
+  margin-left: 1%;
+}
+.ml-2 {
+  margin-left: 2%;
+}
+.width-100 {
+  width: 24rem;
+}
+.width-25 {
+  width: 25%;
+}
+
+.btn-register {
+  height: 2.5rem;
+}

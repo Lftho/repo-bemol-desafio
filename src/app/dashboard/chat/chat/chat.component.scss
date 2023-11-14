@@ -1,0 +1,40 @@
+.container {
+  .matToolbar {
+    .menu {
+      ul {
+        li {
+          list-style: none;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+
+  .main-chat {
+    display: flex;
+    margin-top: 0 auto;
+    border: 1px solid red;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 660px;
+
+    height: 40vh;
+
+    .section-chat {
+      padding: 10px;
+    }
+
+    .section-footer {
+      position: absolute;
+      right: 0;
+      left: 10rem;
+      top: 23rem;
+
+      width: 100%;
+    }
+  }
+}

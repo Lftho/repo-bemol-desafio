@@ -1,0 +1,69 @@
+<mat-card class="box">
+  <mat-card-header>
+    <mat-card-title>Register</mat-card-title>
+  </mat-card-header>
+</mat-card>
+
+<mat-grid-list cols="1" rowHeight="600px">
+  <mat-grid-tile>
+    <form class="form-horizontal" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <div class="example-container">
+        <mat-form-field appearance="fill" class="width-50">
+          <mat-label for="username">Nome</mat-label>
+          <input type="text" formControlName="username" id="username" placeholder="username" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="width-50 ml-2">
+          <mat-label for="password">Password</mat-label>
+          <input formControlName="password" id="password" matInput [type]="hide ? 'password' : 'text'" />
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill" class="width-100">
+          <mat-label for="email">E-mail</mat-label>
+          <input type="email" formControlName="email" id="email" placeholder="nome@email.com" matInput />
+        </mat-form-field>
+        <br>
+
+        <div formGroupName="endereco">
+          <mat-form-field appearance="fill" class="width-50">
+            <mat-label for="cep">CEP</mat-label>
+            <input type="text" formControlName="cep" id="cep" matInput placeholder="00000-000" (blur)="consultaCEP()" />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="width-50 ml-2">
+            <mat-label for="numero">Número</mat-label>
+            <input type="number" formControlName="numero" id="numero" matInput placeholder="Informe o número" />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="width-100">
+            <mat-label for="rua">Avenida/Rua</mat-label>
+            <input type="text" formControlName="rua" id="rua" matInput [readonly]="disabled" />
+          </mat-form-field>
+
+          <mat-form-field class="width-30">
+            <mat-label for="bairro">Bairro</mat-label>
+            <input type="text" formControlName="bairro" id="bairro" matInput />
+          </mat-form-field>
+
+          <mat-form-field class="width-25 ml-1">
+            <mat-label for="cidade">Cidade</mat-label>
+            <input type="text" formControlName="cidade" id="cidade" matInput [readonly]="disabled" />
+          </mat-form-field>
+
+          <mat-form-field class="width-30 ml-1">
+            <mat-label for="estado">Estado</mat-label>
+            <input type="text" formControlName="estado" id="estado" matInput [readonly]="disabled" />
+          </mat-form-field>
+        </div>
+
+        <button type="submit" mat-flat-button color="primary" class="btn-register width-100" [disabled]="isValid">
+          Registrar </button>
+      </div>
+    </form>
+  </mat-grid-tile>
+</mat-grid-list>
